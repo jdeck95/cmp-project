@@ -1,14 +1,10 @@
-import { Button } from 'react-native';
 import React, { Component } from 'react';
 import { View, Platform, Text } from 'react-native';
 import { STATUS_BAR_HEIGHT } from '../constants';
 
-
-
-
-class MainScreen extends Component {
+class ActivityIndicator extends Component {
     static navigationOptions = () => ({
-        title: 'Übersicht',
+        title: 'Aktivitätsanzeige',
         headerStyle: {
             height: Platform.OS === 'android' ? 54 + STATUS_BAR_HEIGHT : 54,
             backgroundColor: '#2196F3'
@@ -21,21 +17,12 @@ class MainScreen extends Component {
     });
 
     render() {
-        const { navigate } = this.props.navigation;
         return (
             <View style={{ flex: 1, backgroundColor: 'black' }}>
-                {<Button
-                    onPress={() =>
-                        navigate('Profile', { name: 'Aktivitätsanzeige' })}
-                    title="Aktivitätsanzeige"
-                    color="#841584"
-                    accessibilityLabel="Aktivitätsanzeige"
-                />}
 
             </View>
-
         );
     }
 }
 
-export default MainScreen;
+export default ActivityIndicator;
