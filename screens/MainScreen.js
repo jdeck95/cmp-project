@@ -1,39 +1,32 @@
-import { Button } from 'react-native';
 import React, { Component } from 'react';
-import { View, Platform, Text } from 'react-native';
+import { Platform,  Button } from 'react-native';
 import { STATUS_BAR_HEIGHT } from '../constants';
+import ButtonCard from '../components/ButtonCard';
 
 
 
 
 class MainScreen extends Component {
     static navigationOptions = () => ({
-        title: 'Übersicht',
+        title: 'React Native Prototype',
         headerStyle: {
-            height: Platform.OS === 'android' ? 54 + STATUS_BAR_HEIGHT : 54,
-            backgroundColor: '#2196F3'
-        },
-        headerTitleStyle: {
             marginTop: Platform.OS === 'android' ? STATUS_BAR_HEIGHT : 0,
-            color: 'white'
+            backgroundColor: '#2196F3',
         },
-        headerLeft: <View><Text>Icon</Text></View>
     });
 
     render() {
         const { navigate } = this.props.navigation;
         return (
-            <View style={{ flex: 1, backgroundColor: 'black' }}>
-                {<Button
+            <ButtonCard text1 = "Dieser Button führt zur Aktivitätsänzeige." text2 = "Für weitere Informationen klicken!">
+                <Button
                     onPress={() =>
-                        navigate('Profile', { name: 'Aktivitätsanzeige' })}
+                    navigate('Profile', { name: 'Aktivitätsanzeige' })}
                     title="Aktivitätsanzeige"
                     color="#841584"
                     accessibilityLabel="Aktivitätsanzeige"
-                />}
-
-            </View>
-
+                />
+            </ButtonCard>
         );
     }
 }
