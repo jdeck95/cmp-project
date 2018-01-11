@@ -1,0 +1,43 @@
+import React from 'react'
+import { StyleSheet, Text, View, Button, TouchableNativeFeedback } from 'react-native'
+
+export default class LoginScreen extends React.Component {
+    render() {
+        return (
+            <View style={styles.container}>
+                {/*<Text style={styles.text}>Welcome to the Prototype of a React Native App</Text>*/}
+                <TouchableNativeFeedback
+                    onPress={()=>{this.props.navigation.navigate('drawerStack')}}
+                    background={TouchableNativeFeedback.SelectableBackground()}>
+                    <View style={styles.loginButton}>
+                        <Text style={{color: 'white'}}>Login</Text>
+                    </View>
+                </TouchableNativeFeedback>
+            </View>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    text: {
+        top: -40,
+        paddingBottom: 0
+    },
+    loginButton: {
+        width: '80%',
+        height: 60,
+        borderWidth: 2,
+        borderRadius: 5,
+        borderColor: '#3399FF',
+        backgroundColor: '#3399FF',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+});
