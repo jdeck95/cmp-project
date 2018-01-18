@@ -5,6 +5,7 @@ import { StackNavigator } from 'react-navigation';
 import { DrawerNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import store from './store';
+import { Constants } from 'expo'
 
 import LoginScreen from './screens/LoginScreen'
 import WelcomeScreen from './screens/WelcomeScreen'
@@ -49,7 +50,7 @@ const DrawerNavigation = StackNavigator({
 }, {
     headerMode: 'float',
     navigationOptions: ({navigation}) => ({
-        headerStyle: {backgroundColor: '#3399FF', marginTop: Platform.OS === 'android' ? STATUS_BAR_HEIGHT : 0,},
+        headerStyle: {backgroundColor: '#3399FF', marginTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0,},
         headerTitleStyle: {color: '#fff'},
         headerLeft:
             <View style={{paddingLeft: 15}}>
@@ -70,7 +71,7 @@ const LoginStack = StackNavigator({
 }, {
     headerMode: 'float',
     navigationOptions: {
-        headerStyle: {backgroundColor: 'red', marginTop: Platform.OS === 'android' ? STATUS_BAR_HEIGHT : 0},
+        headerStyle: {backgroundColor: 'red', marginTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0},
         headerTitleStyle: {color: '#fff'},
         title: 'You are not logged in'
     }
