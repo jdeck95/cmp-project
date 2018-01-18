@@ -1,12 +1,14 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { Camera, Permissions } from 'expo';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
+import { Camera, Permissions, ImagePicker } from 'expo';
 import Ionicon from 'react-native-vector-icons/Ionicons'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default class CameraExample extends React.Component {
     state = {
         hasCameraPermission: null,
         type: Camera.Constants.Type.back,
+        activePic: 'https://www.appcoda.com/wp-content/uploads/2015/04/react-native-1024x631.png'
     };
 
     async componentWillMount() {
@@ -23,7 +25,7 @@ export default class CameraExample extends React.Component {
         } else {
             return (
                 <View style={{ flex: 1 }}>
-                    <Camera style={{ flex: 1 }} type={this.state.type}>
+                    <Camera style={{ flex: 1 }} type={this.state.type} ref={ref => { this.camera = ref; }}>
                         <View
                             style={{
                                 flex: 1,
@@ -45,6 +47,27 @@ export default class CameraExample extends React.Component {
                                 }}>
                                 <Ionicon name="ios-refresh-circle-outline" size={30} color="white"/>
                             </TouchableOpacity>
+                            <TouchableOpacity
+                                style={{
+                                    flex: 1,
+                                    alignSelf: 'flex-end',
+                                    alignItems: 'center'
+                                }}
+                                onPress={async () => {
+                                    if (this.camera) {
+                                        let photo = await this.camera.takePictureAsync();
+                                        this.setState({activePic: photo.uri});
+                                        console.log(photo);
+                                    }
+                                }}>
+                                <FontAwesome name="camera" size={70} color="white"/>
+                            </TouchableOpacity>
+                            <View style={{alignSelf: 'flex-end'}}>
+                                <Image
+                                    style={{width: 50, height: 80}}
+                                    source={{uri: this.state.activePic}}
+                                />
+                            </View>
                         </View>
                     </Camera>
                 </View>
