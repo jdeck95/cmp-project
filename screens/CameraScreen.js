@@ -1,8 +1,15 @@
 import React from 'react';
-import { Text, View, TouchableOpacity, Image } from 'react-native';
-import { Camera, Permissions, ImagePicker } from 'expo';
+import { Text, View, TouchableOpacity, Image, CameraRoll } from 'react-native';
+import { Camera, Permissions } from 'expo';
+import {NavigationActions} from 'react-navigation';
 import Ionicon from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+
+const navigateAction = NavigationActions.navigate({
+    routeName: 'Hardware',
+    params: {},
+    action: NavigationActions.navigate({ routeName: 'Gallery'})
+});
 
 export default class CameraExample extends React.Component {
     state = {
@@ -56,18 +63,25 @@ export default class CameraExample extends React.Component {
                                 onPress={async () => {
                                     if (this.camera) {
                                         let photo = await this.camera.takePictureAsync();
-                                        this.setState({activePic: photo.uri});
-                                        console.log(photo);
+                                        CameraRoll.saveToCameraRoll(photo.uri).then(() => {
+                                            this.setState({activePic: photo.uri});
+                                            console.log(photo);
+                                        });
                                     }
                                 }}>
                                 <FontAwesome name="camera" size={70} color="white"/>
                             </TouchableOpacity>
-                            <View style={{alignSelf: 'flex-end'}}>
+                            <TouchableOpacity
+                                style={{alignSelf: 'flex-end'}}
+                                onPress={() => {
+                                    this.props.navigation.dispatch(navigateAction);
+                                    console.log('Go to Gallery');
+                                }}>
                                 <Image
                                     style={{width: 50, height: 80}}
                                     source={{uri: this.state.activePic}}
                                 />
-                            </View>
+                            </TouchableOpacity>
                         </View>
                     </Camera>
                 </View>
