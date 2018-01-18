@@ -13,8 +13,11 @@ import HardwareScreen from './screens/HardwareScreen'
 import ImpressumScreen from './screens/ImpressumScreen'
 import VibrationScreen from './screens/VibrationScreen'
 import TimeScreen from './screens/TimeScreen'
+import ShareTextScreen from './screens/ShareTextScreen'
+import SwipeableScreen from './screens/SwipeableScreen'
 import DrawerScreen from './screens/DrawerScreen'
-import GalleryScreen from './screens/GalleryScreen'
+import {STATUS_BAR_HEIGHT} from "./constants";
+
 
 export default class App extends Component {
   render() {
@@ -33,7 +36,8 @@ const DrawerStack = DrawerNavigator({
     Impressum: { screen: ImpressumScreen },
     Vibration: { screen: VibrationScreen },
     Time: { screen: TimeScreen },
-    Gallery: { screen: GalleryScreen},
+    ShareText: { screen: ShareTextScreen },
+    Swipeable: { screen: SwipeableScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
