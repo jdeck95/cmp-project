@@ -43,6 +43,11 @@ export default class DrawerContainer extends React.Component {
                     Share Text
                 </Text>
                 <Text
+                    onPress={() => navigation.navigate('Swipeable')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'Swipeable') ? styles.activeItem : null]}>
+                    Swipeable Displays
+                </Text>
+                <Text
                     onPress={() => navigation.navigate('loginStack')}
                     style={[styles.drawerItem, styles.logOut]}>
                     Logout
