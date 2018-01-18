@@ -10,8 +10,10 @@ import LoginScreen from './screens/LoginScreen'
 import WelcomeScreen from './screens/WelcomeScreen'
 import HardwareScreen from './screens/HardwareScreen'
 import ImpressumScreen from './screens/ImpressumScreen'
+import VibrationScreen from './screens/VibrationScreen'
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
+
 
 export default class App extends Component {
   render() {
@@ -28,6 +30,7 @@ const DrawerStack = DrawerNavigator({
     Welcome: { screen: WelcomeScreen },
     Hardware: { screen: HardwareScreen },
     Impressum: { screen: ImpressumScreen },
+    Vibration: { screen: VibrationScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
