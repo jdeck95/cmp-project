@@ -33,6 +33,11 @@ export default class DrawerContainer extends React.Component {
                     Zeitanzeige
                 </Text>
                 <Text
+                    onPress={() => navigation.navigate('ShareText')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'ShareText') ? styles.activeItem : null]}>
+                    Share Text
+                </Text>
+                <Text
                     onPress={() => navigation.navigate('loginStack')}
                     style={[styles.drawerItem, styles.logOut]}>
                     Logout

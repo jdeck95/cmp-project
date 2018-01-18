@@ -12,6 +12,7 @@ import HardwareScreen from './screens/HardwareScreen'
 import ImpressumScreen from './screens/ImpressumScreen'
 import VibrationScreen from './screens/VibrationScreen'
 import TimeScreen from './screens/TimeScreen'
+import ShareTextScreen from './screens/ShareTextScreen'
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
 
@@ -33,6 +34,7 @@ const DrawerStack = DrawerNavigator({
     Impressum: { screen: ImpressumScreen },
     Vibration: { screen: VibrationScreen },
     Time: { screen: TimeScreen },
+    ShareText: { screen: ShareTextScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
