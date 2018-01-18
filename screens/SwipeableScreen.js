@@ -4,7 +4,7 @@ import { StyleSheet, View, ScrollView, Text, Dimensions } from 'react-native';
 
 var Device_Width = Dimensions.get('window').width ;
 
-export default class MainActivity extends Component {
+export default class SwipeableScreen extends Component {
 
 
     render() {

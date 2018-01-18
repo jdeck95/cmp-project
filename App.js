@@ -14,6 +14,7 @@ import VibrationScreen from './screens/VibrationScreen'
 import TimeScreen from './screens/TimeScreen'
 import ShareTextScreen from './screens/ShareTextScreen'
 import SwipeableScreen from './screens/SwipeableScreen'
+import FloatingActionButtonScreen from './screens/FloatingActionButtonScreen'
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
 
@@ -37,6 +38,7 @@ const DrawerStack = DrawerNavigator({
     Time: { screen: TimeScreen },
     ShareText: { screen: ShareTextScreen },
     Swipeable: { screen: SwipeableScreen },
+    FloatingActionButton: { screen: FloatingActionButtonScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen

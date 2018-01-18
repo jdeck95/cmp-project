@@ -48,6 +48,11 @@ export default class DrawerContainer extends React.Component {
                     Swipeable Displays
                 </Text>
                 <Text
+                    onPress={() => navigation.navigate('FloatingActionButton')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'FloatingActionButton') ? styles.activeItem : null]}>
+                    Fliegender Aktionsbutton
+                </Text>
+                <Text
                     onPress={() => navigation.navigate('loginStack')}
                     style={[styles.drawerItem, styles.logOut]}>
                     Logout
