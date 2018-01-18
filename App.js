@@ -5,12 +5,13 @@ import { StackNavigator } from 'react-navigation';
 import { DrawerNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import store from './store';
-import {STATUS_BAR_HEIGHT} from "./constants";
 
 import LoginScreen from './screens/LoginScreen'
 import WelcomeScreen from './screens/WelcomeScreen'
 import HardwareScreen from './screens/HardwareScreen'
 import ImpressumScreen from './screens/ImpressumScreen'
+import VibrationScreen from './screens/VibrationScreen'
+import TimeScreen from './screens/TimeScreen'
 import DrawerScreen from './screens/DrawerScreen'
 import GalleryScreen from './screens/GalleryScreen'
 
@@ -29,6 +30,8 @@ const DrawerStack = DrawerNavigator({
     Welcome: { screen: WelcomeScreen },
     Hardware: { screen: HardwareScreen },
     Impressum: { screen: ImpressumScreen },
+    Vibration: { screen: VibrationScreen },
+    Time: { screen: TimeScreen },
     Gallery: { screen: GalleryScreen},
 }, {
     gesturesEnabled: false,

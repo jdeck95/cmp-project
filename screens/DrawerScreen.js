@@ -28,6 +28,16 @@ export default class DrawerContainer extends React.Component {
                     Impressum
                 </Text>
                 <Text
+                    onPress={() => navigation.navigate('Vibration')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'Vibration') ? styles.activeItem : null]}>
+                    Vibration Test
+                </Text>
+                <Text
+                    onPress={() => navigation.navigate('Time')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'Time') ? styles.activeItem : null]}>
+                    Zeitanzeige
+                </Text>
+                <Text
                     onPress={() => navigation.navigate('loginStack')}
                     style={[styles.drawerItem, styles.logOut]}>
                     Logout
