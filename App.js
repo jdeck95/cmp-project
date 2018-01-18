@@ -5,13 +5,14 @@ import { StackNavigator } from 'react-navigation';
 import { DrawerNavigator } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import store from './store';
+import {STATUS_BAR_HEIGHT} from "./constants";
 
 import LoginScreen from './screens/LoginScreen'
 import WelcomeScreen from './screens/WelcomeScreen'
 import HardwareScreen from './screens/HardwareScreen'
 import ImpressumScreen from './screens/ImpressumScreen'
 import DrawerScreen from './screens/DrawerScreen'
-import {STATUS_BAR_HEIGHT} from "./constants";
+import GalleryScreen from './screens/GalleryScreen'
 
 export default class App extends Component {
   render() {
@@ -28,6 +29,7 @@ const DrawerStack = DrawerNavigator({
     Welcome: { screen: WelcomeScreen },
     Hardware: { screen: HardwareScreen },
     Impressum: { screen: ImpressumScreen },
+    Gallery: { screen: GalleryScreen},
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen

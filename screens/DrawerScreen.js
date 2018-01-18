@@ -18,6 +18,11 @@ export default class DrawerContainer extends React.Component {
                     Hardware
                 </Text>
                 <Text
+                    onPress={() => navigation.navigate('Gallery')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'Gallery') ? styles.activeItem : null]}>
+                    Gallery
+                </Text>
+                <Text
                     onPress={() => navigation.navigate('Impressum')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Impressum') ? styles.activeItem : null]}>
                     Impressum
