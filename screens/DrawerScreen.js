@@ -68,15 +68,35 @@ export default class DrawerContainer extends React.Component {
                      Zeichen zählen
                  </Text>
                  <Text
-                     onPress={() => navigation.navigate('Numpad')}
-                     style={[styles.drawerItem, (this.props.activeItemKey === 'Numpad') ? styles.activeItem : null]}>
-                     Zahlenblock
+                 onPress={() => navigation.navigate('Numpad')}
+                 style={[styles.drawerItem, (this.props.activeItemKey === 'Numpad') ? styles.activeItem : null]}>
+                 Zahlenblock
+             </Text>
+                 <Text
+                     onPress={() => navigation.navigate('RdmBackgroundC')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'RdmBackgroundC') ? styles.activeItem : null]}>
+                     zufällige Hintergrundfarbe
+                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('ChangeView')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'ChangeView') ? styles.activeItem : null]}>
+                     ListView/GridView
+                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('Progressbar')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'Progressbar') ? styles.activeItem : null]}>
+                     Ladebalken
                  </Text>
                 <Text
-                    onPress={() => navigation.navigate('Impressum')}
-                    style={[styles.drawerItem, (this.props.activeItemKey === 'Impressum') ? styles.activeItem : null]}>
-                    Impressum
+                    onPress={() => navigation.navigate('Orientation')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'Orientation') ? styles.activeItem : null]}>
+                    Displayausrichtung erkennen
                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('Impressum')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'Impressum') ? styles.activeItem : null]}>
+                     Impressum
+                 </Text>
                 <Text
                     onPress={() => navigation.navigate('loginStack')}
                     style={[styles.drawerItem, styles.logOut]}>

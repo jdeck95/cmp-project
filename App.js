@@ -21,6 +21,10 @@ import DropDownListScreen from './screens/DropDownListScreen'
 import ChangeBackgroundScreen from './screens/ChangeBackgroundScreen'
 import CountLetterScreen from "./screens/CountLetterScreen";
 import NumpadScreen from "./screens/NumpadScreen";
+import RdmBackgroundCScreen from "./screens/RdmBackgroundCScreen";
+import ChangeViewScreen from "./screens/ChangeViewScreen";
+import ProgressbarScreen from "./screens/ProgressbarScreen";
+import OrientationScreen from "./screens/OrientationScreen";
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
 
@@ -51,6 +55,10 @@ const DrawerStack = DrawerNavigator({
     DropDownList: { screen: DropDownListScreen },
     CountLetter: { screen: CountLetterScreen },
     Numpad: { screen: NumpadScreen },
+    RdmBackgroundC: { screen: RdmBackgroundCScreen },
+    ChangeView: { screen: ChangeViewScreen },
+    Progressbar: { screen: ProgressbarScreen },
+    Orientation: { screen: OrientationScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
