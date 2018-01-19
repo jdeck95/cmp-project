@@ -25,6 +25,10 @@ import RdmBackgroundCScreen from "./screens/RdmBackgroundCScreen";
 import ChangeViewScreen from "./screens/ChangeViewScreen";
 import ProgressbarScreen from "./screens/ProgressbarScreen";
 import OrientationScreen from "./screens/OrientationScreen";
+import AlertScreen from "./screens/AlertScreen";
+import HeightWidthScreen from "./screens/HeightWidthScreen";
+import SeekbarScreen from "./screens/SeekbarScreen";
+import SwitchScreen from "./screens/SwitchScreen";
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
 
@@ -59,6 +63,10 @@ const DrawerStack = DrawerNavigator({
     ChangeView: { screen: ChangeViewScreen },
     Progressbar: { screen: ProgressbarScreen },
     Orientation: { screen: OrientationScreen },
+    Alert: { screen: AlertScreen },
+    HeightWidth: { screen: HeightWidthScreen },
+    Seekbar: { screen: SeekbarScreen },
+    Switch: { screen: SwitchScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen

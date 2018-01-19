@@ -93,6 +93,26 @@ export default class DrawerContainer extends React.Component {
                     Displayausrichtung erkennen
                 </Text>
                  <Text
+                     onPress={() => navigation.navigate('Alert')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'Alert') ? styles.activeItem : null]}>
+                     Alarm
+                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('HeightWidth')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'HeightWidth') ? styles.activeItem : null]}>
+                     Gerät Höhe/Breite
+                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('Seekbar')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'Seekbar') ? styles.activeItem : null]}>
+                     Schieberegler
+                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('Switch')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'Switch') ? styles.activeItem : null]}>
+                     Schalter
+                 </Text>
+                 <Text
                      onPress={() => navigation.navigate('Impressum')}
                      style={[styles.drawerItem, (this.props.activeItemKey === 'Impressum') ? styles.activeItem : null]}>
                      Impressum
