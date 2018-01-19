@@ -53,6 +53,11 @@ export default class DrawerContainer extends React.Component {
                     Fliegender Aktionsbutton
                 </Text>
                 <Text
+                    onPress={() => navigation.navigate('Youtube')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'Youtube') ? styles.activeItem : null]}>
+                    Youtube Video
+                </Text>
+                <Text
                     onPress={() => navigation.navigate('loginStack')}
                     style={[styles.drawerItem, styles.logOut]}>
                     Logout

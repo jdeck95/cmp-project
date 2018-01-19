@@ -16,6 +16,7 @@ import TimeScreen from './screens/TimeScreen'
 import ShareTextScreen from './screens/ShareTextScreen'
 import SwipeableScreen from './screens/SwipeableScreen'
 import FloatingActionButtonScreen from './screens/FloatingActionButtonScreen'
+import YoutubeScreen from './screens/YoutubeScreen'
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
 
@@ -40,6 +41,7 @@ const DrawerStack = DrawerNavigator({
     ShareText: { screen: ShareTextScreen },
     Swipeable: { screen: SwipeableScreen },
     FloatingActionButton: { screen: FloatingActionButtonScreen },
+    Youtube: { screen: YoutubeScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
