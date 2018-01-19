@@ -23,14 +23,9 @@ export default class DrawerContainer extends React.Component {
                     Gallery
                 </Text>
                 <Text
-                    onPress={() => navigation.navigate('Impressum')}
-                    style={[styles.drawerItem, (this.props.activeItemKey === 'Impressum') ? styles.activeItem : null]}>
-                    Impressum
-                </Text>
-                <Text
                     onPress={() => navigation.navigate('Vibration')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Vibration') ? styles.activeItem : null]}>
-                    Vibration Test
+                    Vibration
                 </Text>
                 <Text
                     onPress={() => navigation.navigate('Time')}
@@ -40,12 +35,12 @@ export default class DrawerContainer extends React.Component {
                 <Text
                     onPress={() => navigation.navigate('ShareText')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'ShareText') ? styles.activeItem : null]}>
-                    Share Text
+                    Text teilen
                 </Text>
                 <Text
                     onPress={() => navigation.navigate('Swipeable')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Swipeable') ? styles.activeItem : null]}>
-                    Swipeable Displays
+                    wischbare Displays
                 </Text>
                 <Text
                     onPress={() => navigation.navigate('FloatingActionButton')}
@@ -56,6 +51,21 @@ export default class DrawerContainer extends React.Component {
                     onPress={() => navigation.navigate('Youtube')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Youtube') ? styles.activeItem : null]}>
                     Youtube Video
+                </Text>
+                <Text
+                    onPress={() => navigation.navigate('ChangeBackground')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'ChangeBackground') ? styles.activeItem : null]}>
+                    Hintergrundanimation
+                </Text>
+                <Text
+                    onPress={() => navigation.navigate('DropDownList')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'DropDownList') ? styles.activeItem : null]}>
+                    Item Liste
+                </Text>
+                <Text
+                    onPress={() => navigation.navigate('Impressum')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'Impressum') ? styles.activeItem : null]}>
+                    Impressum
                 </Text>
                 <Text
                     onPress={() => navigation.navigate('loginStack')}

@@ -17,6 +17,8 @@ import ShareTextScreen from './screens/ShareTextScreen'
 import SwipeableScreen from './screens/SwipeableScreen'
 import FloatingActionButtonScreen from './screens/FloatingActionButtonScreen'
 import YoutubeScreen from './screens/YoutubeScreen'
+import DropDownListScreen from './screens/DropDownListScreen'
+import ChangeBackgroundScreen from './screens/ChangeBackgroundScreen'
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
 
@@ -42,6 +44,8 @@ const DrawerStack = DrawerNavigator({
     Swipeable: { screen: SwipeableScreen },
     FloatingActionButton: { screen: FloatingActionButtonScreen },
     Youtube: { screen: YoutubeScreen },
+    ChangeBackground: { screen: ChangeBackgroundScreen },
+    DropDownList: { screen: DropDownListScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
