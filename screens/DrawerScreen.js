@@ -1,12 +1,12 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet,ScrollView, Text, View, Image } from 'react-native'
 import { NavigationActions } from 'react-navigation'
 
 export default class DrawerContainer extends React.Component {
     render() {
         const { navigation } = this.props;
         return (
-            <View style={styles.container}>
+             <ScrollView contentContainerStyle={styles.contentContainer}>
                 <Text
                     onPress={() => navigation.navigate('Welcome')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Welcome') ? styles.activeItem : null]}>
@@ -62,6 +62,16 @@ export default class DrawerContainer extends React.Component {
                     style={[styles.drawerItem, (this.props.activeItemKey === 'DropDownList') ? styles.activeItem : null]}>
                     Item Liste
                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('CountLetter')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'CountLetter') ? styles.activeItem : null]}>
+                     Zeichen zählen
+                 </Text>
+                 <Text
+                     onPress={() => navigation.navigate('Numpad')}
+                     style={[styles.drawerItem, (this.props.activeItemKey === 'Numpad') ? styles.activeItem : null]}>
+                     Zahlenblock
+                 </Text>
                 <Text
                     onPress={() => navigation.navigate('Impressum')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Impressum') ? styles.activeItem : null]}>
@@ -72,10 +82,11 @@ export default class DrawerContainer extends React.Component {
                     style={[styles.drawerItem, styles.logOut]}>
                     Logout
                 </Text>
-            </View>
+             </ScrollView>
         )
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {

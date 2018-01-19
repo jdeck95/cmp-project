@@ -19,8 +19,11 @@ import FloatingActionButtonScreen from './screens/FloatingActionButtonScreen'
 import YoutubeScreen from './screens/YoutubeScreen'
 import DropDownListScreen from './screens/DropDownListScreen'
 import ChangeBackgroundScreen from './screens/ChangeBackgroundScreen'
+import CountLetterScreen from "./screens/CountLetterScreen";
+import NumpadScreen from "./screens/NumpadScreen";
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
+
 
 
 export default class App extends Component {
@@ -46,6 +49,8 @@ const DrawerStack = DrawerNavigator({
     Youtube: { screen: YoutubeScreen },
     ChangeBackground: { screen: ChangeBackgroundScreen },
     DropDownList: { screen: DropDownListScreen },
+    CountLetter: { screen: CountLetterScreen },
+    Numpad: { screen: NumpadScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
