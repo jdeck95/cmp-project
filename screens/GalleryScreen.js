@@ -20,7 +20,6 @@ export default class GalleryScreen extends React.Component {
         })
             .then(r => {
                 this.setState({ photos: r.edges });
-                console.log(this.state);
             })
             .catch((err) => {
                 //Error Loading Images

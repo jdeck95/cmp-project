@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, TouchableOpacity, Image, CameraRoll } from 'react-native';
-import { Camera, Permissions } from 'expo';
+import { Camera, Permissions, ImagePicker } from 'expo';
 import {NavigationActions} from 'react-navigation';
 import Ionicon from 'react-native-vector-icons/Ionicons'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
@@ -65,7 +65,6 @@ export default class CameraExample extends React.Component {
                                         let photo = await this.camera.takePictureAsync();
                                         CameraRoll.saveToCameraRoll(photo.uri).then(() => {
                                             this.setState({activePic: photo.uri});
-                                            console.log(photo);
                                         });
                                     }
                                 }}>
@@ -74,8 +73,7 @@ export default class CameraExample extends React.Component {
                             <TouchableOpacity
                                 style={{alignSelf: 'flex-end'}}
                                 onPress={() => {
-                                    this.props.navigation.dispatch(navigateAction);
-                                    console.log('Go to Gallery');
+                                    ImagePicker.launchImageLibraryAsync();
                                 }}>
                                 <Image
                                     style={{width: 50, height: 80}}
