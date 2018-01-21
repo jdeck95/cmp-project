@@ -28,11 +28,6 @@ export default class DrawerContainer extends React.Component {
                     Vibration
                 </Text>
                 <Text
-                    onPress={() => navigation.navigate('Time')}
-                    style={[styles.drawerItem, (this.props.activeItemKey === 'Time') ? styles.activeItem : null]}>
-                    Zeitanzeige
-                </Text>
-                <Text
                     onPress={() => navigation.navigate('ShareText')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'ShareText') ? styles.activeItem : null]}>
                     Text teilen
@@ -57,26 +52,11 @@ export default class DrawerContainer extends React.Component {
                     style={[styles.drawerItem, (this.props.activeItemKey === 'ChangeBackground') ? styles.activeItem : null]}>
                     Hintergrundanimation
                 </Text>
-                <Text
-                    onPress={() => navigation.navigate('DropDownList')}
-                    style={[styles.drawerItem, (this.props.activeItemKey === 'DropDownList') ? styles.activeItem : null]}>
-                    Item Liste
-                </Text>
-                 <Text
-                     onPress={() => navigation.navigate('CountLetter')}
-                     style={[styles.drawerItem, (this.props.activeItemKey === 'CountLetter') ? styles.activeItem : null]}>
-                     Zeichen zählen
-                 </Text>
                  <Text
                  onPress={() => navigation.navigate('Numpad')}
                  style={[styles.drawerItem, (this.props.activeItemKey === 'Numpad') ? styles.activeItem : null]}>
                  Zahlenblock
-             </Text>
-                 <Text
-                     onPress={() => navigation.navigate('RdmBackgroundC')}
-                     style={[styles.drawerItem, (this.props.activeItemKey === 'RdmBackgroundC') ? styles.activeItem : null]}>
-                     zufällige Hintergrundfarbe
-                 </Text>
+                </Text>
                  <Text
                      onPress={() => navigation.navigate('ChangeView')}
                      style={[styles.drawerItem, (this.props.activeItemKey === 'ChangeView') ? styles.activeItem : null]}>
@@ -93,11 +73,6 @@ export default class DrawerContainer extends React.Component {
                     Displayausrichtung erkennen
                 </Text>
                  <Text
-                     onPress={() => navigation.navigate('Alert')}
-                     style={[styles.drawerItem, (this.props.activeItemKey === 'Alert') ? styles.activeItem : null]}>
-                     Alarm
-                 </Text>
-                 <Text
                      onPress={() => navigation.navigate('HeightWidth')}
                      style={[styles.drawerItem, (this.props.activeItemKey === 'HeightWidth') ? styles.activeItem : null]}>
                      Gerät Höhe/Breite
@@ -105,12 +80,7 @@ export default class DrawerContainer extends React.Component {
                  <Text
                      onPress={() => navigation.navigate('Seekbar')}
                      style={[styles.drawerItem, (this.props.activeItemKey === 'Seekbar') ? styles.activeItem : null]}>
-                     Schieberegler
-                 </Text>
-                 <Text
-                     onPress={() => navigation.navigate('Switch')}
-                     style={[styles.drawerItem, (this.props.activeItemKey === 'Switch') ? styles.activeItem : null]}>
-                     Schalter
+                     Native Regler
                  </Text>
                  <Text
                      onPress={() => navigation.navigate('Impressum')}

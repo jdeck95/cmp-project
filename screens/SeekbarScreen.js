@@ -1,17 +1,31 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import { AppRegistry, StyleSheet, Text, View, Slider} from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, Slider, Switch, Alert} from 'react-native';
 
 export default class SeekbarScreen extends Component {
 
-    constructor(){
+    constructor() {
 
         super();
 
-        this.state ={
+        this.state = {
+            SliderValue: 0,
+            SwitchOnValueHolder :  false
+        }
+    }
 
-            SliderValue :  0
+    ShowAlert = (value) => {
+        this.setState({
+            SwitchOnValueHolder: value
+        })
 
+        if (value == true) {
+            //Perform any task here which you want to execute on Switch ON event.
+            Alert.alert("Schalter ist an.");
+        }
+        else {
+            //Perform any task here which you want to execute on Switch OFF event.
+            Alert.alert("Schalter ist aus.");
         }
     }
 
@@ -20,30 +34,36 @@ export default class SeekbarScreen extends Component {
         return (
 
             <View style={styles.MainContainer}>
-
-                <Text style = {{fontSize: 20}}>Slider Value = { this.state.SliderValue }</Text>
+                <Text style={{fontSize: 20}}>Slider Value = {this.state.SliderValue}</Text>
 
                 <Slider
-                    step = { 1 }
-                    minimumValue = { 0 }
-                    maximumValue = { 100 }
-                    minimumTrackTintColor = "#009688"
-                    onValueChange={(ChangedValue) => this.setState({ SliderValue: ChangedValue })}
-                    style = {{ width: '100%' }}
+                    step={1}
+                    minimumValue={0}
+                    maximumValue={100}
+                    minimumTrackTintColor="#009688"
+                    onValueChange={(ChangedValue) => this.setState({SliderValue: ChangedValue})}
+                    style={{width: '100%', marginBottom: 30}}
                 />
 
+                <Text style={{fontSize: 18}}> Schalter </Text>
+
+                <Switch
+                    onValueChange={(value) => this.ShowAlert(value)}
+                    style={{marginBottom: 10}}
+                    value={this.state.SwitchOnValueHolder}/>
             </View>
+
         );
     }
 }
 
 const styles = StyleSheet.create({
 
-    MainContainer :{
+    MainContainer: {
 
         justifyContent: 'center',
         alignItems: 'center',
-        flex:1,
+        flex: 1,
         margin: 10
 
     }
