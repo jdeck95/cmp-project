@@ -24,6 +24,7 @@ import OrientationScreen from "./screens/OrientationScreen";
 import HeightWidthScreen from "./screens/HeightWidthScreen";
 import SeekbarScreen from "./screens/SeekbarScreen";
 import DrawerScreen from './screens/DrawerScreen'
+import GalleryScreen from "./screens/GalleryScreen";
 import {STATUS_BAR_HEIGHT} from "./constants";
 
 
@@ -42,6 +43,7 @@ export default class App extends Component {
 const DrawerStack = DrawerNavigator({
     Welcome: { screen: WelcomeScreen },
     Hardware: { screen: HardwareScreen },
+    Gallery: { screen: GalleryScreen},
     Impressum: { screen: ImpressumScreen },
     Vibration: { screen: VibrationScreen },
     ShareText: { screen: ShareTextScreen },
