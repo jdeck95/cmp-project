@@ -22,6 +22,11 @@ export default class DrawerContainer extends React.Component {
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Gallery') ? styles.activeItem : null]}>
                     Gallery
                 </Text>
+                 <Text
+                    onPress={() => navigation.navigate('DatePicker')}
+                    style={[styles.drawerItem, (this.props.activeItemKey === 'DatePicker') ? styles.activeItem : null]}>
+                    DatePicker
+                </Text>
                 <Text
                     onPress={() => navigation.navigate('Vibration')}
                     style={[styles.drawerItem, (this.props.activeItemKey === 'Vibration') ? styles.activeItem : null]}>

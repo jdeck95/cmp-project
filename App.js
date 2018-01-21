@@ -25,6 +25,7 @@ import HeightWidthScreen from "./screens/HeightWidthScreen";
 import SeekbarScreen from "./screens/SeekbarScreen";
 import DrawerScreen from './screens/DrawerScreen'
 import GalleryScreen from "./screens/GalleryScreen";
+import DatePicker from "./screens/DatePickerScreen";
 import {STATUS_BAR_HEIGHT} from "./constants";
 
 
@@ -57,6 +58,7 @@ const DrawerStack = DrawerNavigator({
     Orientation: { screen: OrientationScreen },
     HeightWidth: { screen: HeightWidthScreen },
     Seekbar: { screen: SeekbarScreen },
+    DatePicker: { screen: DatePicker}
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
