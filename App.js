@@ -12,23 +12,17 @@ import WelcomeScreen from './screens/WelcomeScreen'
 import HardwareScreen from './screens/HardwareScreen'
 import ImpressumScreen from './screens/ImpressumScreen'
 import VibrationScreen from './screens/VibrationScreen'
-import TimeScreen from './screens/TimeScreen'
 import ShareTextScreen from './screens/ShareTextScreen'
 import SwipeableScreen from './screens/SwipeableScreen'
 import FloatingActionButtonScreen from './screens/FloatingActionButtonScreen'
 import YoutubeScreen from './screens/YoutubeScreen'
-import DropDownListScreen from './screens/DropDownListScreen'
 import ChangeBackgroundScreen from './screens/ChangeBackgroundScreen'
-import CountLetterScreen from "./screens/CountLetterScreen";
 import NumpadScreen from "./screens/NumpadScreen";
-import RdmBackgroundCScreen from "./screens/RdmBackgroundCScreen";
 import ChangeViewScreen from "./screens/ChangeViewScreen";
 import ProgressbarScreen from "./screens/ProgressbarScreen";
 import OrientationScreen from "./screens/OrientationScreen";
-import AlertScreen from "./screens/AlertScreen";
 import HeightWidthScreen from "./screens/HeightWidthScreen";
 import SeekbarScreen from "./screens/SeekbarScreen";
-import SwitchScreen from "./screens/SwitchScreen";
 import DrawerScreen from './screens/DrawerScreen'
 import {STATUS_BAR_HEIGHT} from "./constants";
 
@@ -50,23 +44,17 @@ const DrawerStack = DrawerNavigator({
     Hardware: { screen: HardwareScreen },
     Impressum: { screen: ImpressumScreen },
     Vibration: { screen: VibrationScreen },
-    Time: { screen: TimeScreen },
     ShareText: { screen: ShareTextScreen },
     Swipeable: { screen: SwipeableScreen },
     FloatingActionButton: { screen: FloatingActionButtonScreen },
     Youtube: { screen: YoutubeScreen },
     ChangeBackground: { screen: ChangeBackgroundScreen },
-    DropDownList: { screen: DropDownListScreen },
-    CountLetter: { screen: CountLetterScreen },
     Numpad: { screen: NumpadScreen },
-    RdmBackgroundC: { screen: RdmBackgroundCScreen },
     ChangeView: { screen: ChangeViewScreen },
     Progressbar: { screen: ProgressbarScreen },
     Orientation: { screen: OrientationScreen },
-    Alert: { screen: AlertScreen },
     HeightWidth: { screen: HeightWidthScreen },
     Seekbar: { screen: SeekbarScreen },
-    Switch: { screen: SwitchScreen },
 }, {
     gesturesEnabled: false,
     contentComponent: DrawerScreen
