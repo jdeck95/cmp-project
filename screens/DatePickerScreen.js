@@ -13,7 +13,7 @@ import {WebBrowser} from "expo";
 export default class DatePicker extends Component {
     constructor(props) {
         super(props);
-        this.state = { chosenDate: 'Wähle ein Datum!', osIsAndroid: true };
+        this.state = { chosenDate: 'Wähle ein Datum!', osIsAndroid: true, newDate: new Date() };
 
         this.setDate = this.setDate.bind(this);
     }
@@ -41,7 +41,7 @@ export default class DatePicker extends Component {
         if (Platform.OS === 'ios') {
             return (
                 <DatePickerIOS
-                    date={this.state.chosenDate}
+                    date={this.state.newDate}
                     onDateChange={this.setDate}
                 />
             );
